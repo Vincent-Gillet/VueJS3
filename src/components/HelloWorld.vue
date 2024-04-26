@@ -4,13 +4,11 @@
 
 <template>
   <h1>Hello World</h1>
-  <slot name="name">
+  <p>Votre nom est {{props.user.name}}  et vous avez {{props.user.age}} ans.</p>
 
-  </slot>
-  <slot name="age"></slot>
+
 </template>
 
 <style scoped>
-
 
 </style>

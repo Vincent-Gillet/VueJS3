@@ -1,56 +1,17 @@
-
-
 <template>
   <header>
-    <HelloWorld />
 
-
-    <div class="bold"
-         :class="[user.age > 30 ? 'text-red' : 'text-green']">
-        {{user.name}}
-    </div>
-
-
+    <router-link :to="{name: 'Home'}">Acceuil</router-link> |
+    <router-link :to="{name: 'Page2'}">Page2</router-link> |
   </header>
 
-  <main>
+  <div>
+    <h1>App</h1>
+    <router-view />
+  </div>
 
-  </main>
 </template>
 
-<script setup>
-import HelloWorld from '@/components/HelloWorld.vue';
-import { ref } from 'vue';
-
-const name = ref('NordCoders');
-const name = ref('NordCoders');
-
-const user = reactive({
-  name: 'NordCoders',
-      age: 30,
-});
-
-
-const display = () => {
-  console.log(user.name, user.age);
-}
-
-display()
-
+<script>
+  export default {}
 </script>
-
-<style scoped>
-
-.bold {
-  font-weight: bolder;
-}
-
-.text-red {
-  color:indianred;
-}
-
-.text-green {
-  color: green;
-}
-
-</style>
